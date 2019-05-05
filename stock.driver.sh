@@ -2,4 +2,6 @@
 
 ### Driver for stock script
 
-python3 stock.py test.stock.csv
+python3 create.portfolio.py stock.list mock.portfolio.csv
+
+python3 stock.py mock.portfolio.csv

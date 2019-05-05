@@ -27,3 +27,6 @@ df['Trailing Stop'] = df['High'].apply(calculate_trailing_stop)
 
 ### print datafram
 print(df)
+
+for col in df.columns: 
+    print(col)
