@@ -36,7 +36,7 @@ while i < len(stockList):
 df['Buy Date'] = randDateList
 
 ### generate Buy Price columnd
-df['Buy Price'] = numpy.random.uniform(5, 200, df.shape[0])
+df['Buy Price'] = numpy.random.uniform(5, 100, df.shape[0])
 df['Buy Price'] = df['Buy Price'].round(2)
 #df['Buy Price'] = df['Buy Price'].astype(float)
 
@@ -44,7 +44,7 @@ df['Buy Price'] = df['Buy Price'].round(2)
 df['Shares'] = numpy.random.randint(1, 30, df.shape[0])
 
 ### generate High column
-df['High'] = numpy.random.uniform(df['Buy Price'], 200, df.shape[0])
+df['High'] = numpy.random.uniform(df['Buy Price'], 100, df.shape[0])
 df['High'] = df['High'].round(2)
 
 ### generate Trailing Stop column

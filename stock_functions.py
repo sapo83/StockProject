@@ -5,7 +5,7 @@ import requests
 
 ### removes $ & , from dollar amounts, returns float
 def dollars_to_float(dollar_str):
-    return float(dollar_str.replace("$","").replace(",",""))
+    return float(dollar_str.replace("$",""))
 
 
 ### get current stock price based on symbol
@@ -33,3 +33,12 @@ def check_high(vals):
 ### calculate trailing stop
 def calculate_trailing_stop(val):
     return(round(val - (val*0.25), 2))
+
+def sell_check(vals):
+    TS = vals[6]
+    current = vals[7]
+    sym = vals[1]
+    if float(TS) >= float(current):
+        return(sym)
+    else:
+        return("HOLD")
